@@ -167,45 +167,59 @@ export const projects = [
   },
 ];
 
-export const timeline = [
+export const educationList = [
   {
     period: "Em andamento",
     title: "Bacharelado em Engenharia de Computação",
-    institution: "UNIVESP — Universidade Virtual do Estado de São Paulo",
-    description:
-      "Formação com foco em algoritmos, arquitetura de computadores, sistemas distribuídos, banco de dados, engenharia de software e desenvolvimento de projetos integradores práticos.",
-    badge: "Graduação",
+    institution: "UNIVESP",
+    description: "Algoritmos, arquitetura de computadores, banco de dados, engenharia de software e projetos integradores aplicados.",
   },
   {
-    period: "Carreira Industrial",
-    title: "Atuação Técnica & Automação Industrial",
-    institution: "Tetra Pak & Setor Industrial",
-    description:
-      "Experiência com manutenção industrial especializada, sistemas elétricos, automação, comandos, supervisão de linhas de produção e programação de controladores segundo a norma IEC 61131-3.",
-    badge: "Indústria",
+    period: "Graduação",
+    title: "Processos Gerenciais",
+    institution: "UNASP",
+    description: "Gestão operacional, otimização de fluxos, liderança e planejamento estratégico.",
   },
   {
-    period: "Formação Complementar",
-    title: "Graduação em Processos Gerenciais",
-    institution: "UNASP — Centro Universitário Adventista de São Paulo",
-    description:
-      "Desenvolvimento de competências em gestão de processos, planejamento estratégico, visão de negócios, liderança e otimização de fluxos operacionais.",
-    badge: "Gestão",
-  },
-  {
-    period: "Formação Técnica",
+    period: "Curso Técnico",
     title: "Técnico em Mecatrônica",
-    institution: "UNISAL — Centro Universitário Salesiano de São Paulo",
-    description:
-      "Integração entre mecânica de precisão, eletrônica analógica/digital, automação com CLPs, pneumática, hidráulica e sensores industriais.",
-    badge: "Mecatrônica",
+    institution: "UNISAL",
+    description: "Integração eletromecânica, pneumática, eletrônica e programação de CLPs industriais.",
   },
   {
     period: "Fundação Técnica",
     title: "Eletricista de Manutenção",
     institution: "SENAI",
-    description:
-      "Bases sólidas em instalações elétricas industriais, máquinas elétricas, comandos, painéis elétricos e segurança em instalações de alta e baixa tensão.",
-    badge: "Elétrica",
+    description: "Comandos elétricos industriais, máquinas elétricas, painéis e conformidade técnica.",
   },
 ];
+
+export const experienceList = [
+  {
+    period: "Atual",
+    role: "Atuação Técnica & Manutenção Industrial",
+    company: "Tetra Pak",
+    description: "Manutenção técnica especializada em linhas industriais, sistemas automatizados de envase e controle de processos de alta precisão.",
+  },
+  {
+    period: "Prática Técnica",
+    role: "Programação de Controladores (IEC 61131-3)",
+    company: "Automação Industrial",
+    description: "Desenvolvimento e adequação de lógicas de controle industrial utilizando linguagens padronizadas pela norma IEC 61131-3.",
+  },
+  {
+    period: "Projetos",
+    role: "Desenvolvedor de Software & IoT",
+    company: "Projetos Pessoais & Acadêmicos",
+    description: "Integração entre hardware e software: aplicativos em Electron para portas seriais, interfaces web em React/Vue e embarcados em C++.",
+  },
+  {
+    period: "Início de Carreira",
+    role: "Manutenção Elétrica de Chão de Fábrica",
+    company: "Setor Industrial",
+    description: "Montagem de comandos elétricos, parametrização de inversores de frequência e diagnóstico de instrumentação em campo.",
+  },
+];
+
+export const timeline = [...educationList, ...experienceList];
+

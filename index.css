@@ -72,7 +72,7 @@ button {
 
 .content-container {
   width: 100%;
-  max-width: 680px;
+  max-width: 760px;
   padding: 64px 24px 80px 24px;
 }
 
@@ -96,8 +96,8 @@ button {
 }
 
 .profile-photo {
-  width: 84px;
-  height: 84px;
+  width: 86px;
+  height: 86px;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--border-color);
@@ -186,30 +186,36 @@ button {
    ========================================================================== */
 
 .section-block {
-  margin-bottom: 52px;
+  margin-bottom: 56px;
 }
 
 .section-head {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 10px;
 }
 
 .section-heading {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: 1.18rem;
   font-weight: 700;
   color: var(--text-main);
   letter-spacing: -0.015em;
 }
 
 .section-block > .section-heading {
-  margin-bottom: 20px;
+  margin-bottom: 8px;
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 10px;
+}
+
+.section-intro-text {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 24px;
 }
 
 .link-muted {
@@ -225,7 +231,7 @@ button {
 }
 
 /* ==========================================================================
-   Projects List (Clean & Minimal)
+   Projects List
    ========================================================================== */
 
 .project-simple-list {
@@ -308,49 +314,155 @@ button {
 }
 
 /* ==========================================================================
-   Timeline (Education & Trajectory)
+   Single Central Line Timeline (Formação Left / Experiência Right)
    ========================================================================== */
 
-.simple-timeline {
+.single-line-timeline {
+  margin-top: 20px;
+}
+
+.timeline-headers-row {
+  display: grid;
+  grid-template-columns: 1fr 32px 1fr;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.timeline-header-side {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.timeline-header-side.left {
+  justify-content: flex-end;
+}
+
+.timeline-header-side.right {
+  justify-content: flex-start;
+}
+
+.timeline-header-icon {
+  font-size: 1.15rem;
+}
+
+.timeline-header-divider {
+  width: 2px;
+  height: 18px;
+  background: var(--border-color);
+  margin: 0 auto;
+}
+
+.timeline-spine-wrapper {
+  position: relative;
+}
+
+.central-spine-line {
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 50%;
+  width: 2px;
+  background: var(--border-color);
+  transform: translateX(-50%);
+}
+
+.timeline-split-rows {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 32px;
+  position: relative;
+  z-index: 1;
 }
 
-.timeline-row {
+.timeline-split-row {
   display: grid;
-  grid-template-columns: 140px 1fr;
-  gap: 18px;
+  grid-template-columns: 1fr 32px 1fr;
+  align-items: flex-start;
 }
 
-.timeline-meta {
-  padding-top: 2px;
+.split-side {
+  display: flex;
+  flex-direction: column;
 }
 
-.timeline-period-clean {
-  font-size: 0.8rem;
+.split-left {
+  text-align: right;
+  padding-right: 22px;
+  align-items: flex-end;
+}
+
+.split-right {
+  text-align: left;
+  padding-left: 22px;
+  align-items: flex-start;
+}
+
+.split-center {
+  display: flex;
+  justify-content: center;
+  padding-top: 4px;
+}
+
+.center-node-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid var(--text-accent);
+  box-shadow: 0 0 0 3px #ffffff;
+}
+
+.timeline-card-clean {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.split-left .timeline-card-clean {
+  align-items: flex-end;
+}
+
+.split-right .timeline-card-clean {
+  align-items: flex-start;
+}
+
+.entry-period {
+  font-size: 0.74rem;
   font-family: var(--font-mono);
   color: var(--text-muted);
+  background: var(--bg-badge);
+  padding: 1px 7px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 5px;
 }
 
-.timeline-title-clean {
-  font-size: 0.98rem;
+.entry-title {
+  font-size: 0.94rem;
   font-weight: 600;
   color: var(--text-main);
+  line-height: 1.35;
   margin-bottom: 2px;
 }
 
-.timeline-place-clean {
-  font-size: 0.86rem;
-  color: var(--text-accent);
-  margin-bottom: 6px;
+.entry-institution {
+  font-size: 0.84rem;
   font-weight: 500;
+  color: var(--text-accent);
+  margin-bottom: 5px;
 }
 
-.timeline-desc-clean {
-  font-size: 0.88rem;
+.entry-desc {
+  font-size: 0.85rem;
   color: var(--text-body);
-  line-height: 1.55;
+  line-height: 1.5;
 }
 
 /* ==========================================================================
@@ -411,7 +523,7 @@ button {
    Responsive Adjustments
    ========================================================================== */
 
-@media (max-width: 600px) {
+@media (max-width: 640px) {
   .content-container {
     padding: 40px 18px 60px 18px;
   }
@@ -427,14 +539,63 @@ button {
     height: 72px;
   }
 
-  .timeline-row {
+  .timeline-headers-row {
     grid-template-columns: 1fr;
-    gap: 4px;
+    gap: 8px;
+    text-align: left;
   }
 
-  .timeline-period-clean {
-    display: inline-block;
-    margin-bottom: 2px;
+  .timeline-header-side.left {
+    justify-content: flex-start;
+  }
+
+  .timeline-header-divider {
+    display: none;
+  }
+
+  .central-spine-line {
+    left: 14px;
+    transform: none;
+  }
+
+  .timeline-split-row {
+    grid-template-columns: 28px 1fr;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .split-center {
+    grid-column: 1;
+    grid-row: 1;
+    justify-content: flex-start;
+    padding-left: 2px;
+  }
+
+  .split-left {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: left;
+    padding-right: 0;
+    align-items: flex-start;
+    margin-bottom: 12px;
+  }
+
+  .split-left .timeline-card-clean {
+    align-items: flex-start;
+  }
+
+  .split-right {
+    grid-column: 2;
+    grid-row: 2;
+    text-align: left;
+    padding-left: 0;
+    align-items: flex-start;
+    padding-top: 8px;
+    border-top: 1px dashed var(--border-color);
+  }
+
+  .split-right .timeline-card-clean {
+    align-items: flex-start;
   }
 
   .footer-content {
