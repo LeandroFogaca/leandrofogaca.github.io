@@ -1,14 +1,35 @@
 import React from 'react';
+import { personalInfo } from '../data/portfolioData';
 
-const Footer = () => {
-    return (
+export default function Footer() {
+  const currentYear = new Date().getFullYear();
 
-        <footer id='footer'>
-            <p> Esse site foi projetado por Leandro Fogaça e o projeto está no
-                <a href="https://github.com/LeandroFogaca/leandrofogaca.github.io"> Git Hub</a>
-            </p>
-        </footer>
-    );
+  return (
+    <footer className="simple-footer">
+      <div className="footer-content">
+        <p>© {currentYear} {personalInfo.name}</p>
+        <div className="footer-links-clean">
+          <a
+            href={personalInfo.github}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          <span className="dot-divider">•</span>
+          <a
+            href={personalInfo.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+          <span className="dot-divider">•</span>
+          <a href={`mailto:${personalInfo.email}`}>
+            Contato
+          </a>
+        </div>
+      </div>
+    </footer>
+  );
 }
-
-export default Footer;

@@ -1,11 +1,18 @@
-import CardProfile from "./components/CardProfile"
-import Footer from "./components/Footer"
+import React from 'react';
+import Header from './components/Header';
+import Projects from './components/Projects';
+import Experience from './components/Experience';
+import Footer from './components/Footer';
 
-function App() {
-    return <div>
-        < CardProfile />
+export default function App() {
+  return (
+    <div className="portfolio-minimal-layout">
+      <main className="content-container">
+        <Header />
+        <Projects />
+        <Experience />
         <Footer />
+      </main>
     </div>
+  );
 }
-
-export default App
